@@ -11,7 +11,7 @@
         * {
             margin: 0;
             padding: 0;
-            font-family: "Roboto", sans-serif;
+            font-family: "Helvetica", sans-serif;
         }
         html {
             height: 100%;
@@ -21,12 +21,25 @@
             flex-direction: column;
             height: 842px;
             width: 595px;
-            /* to centre page on screen*/
             margin-left: auto;
             margin-right: auto;
         }
         h1,
-        h2 {
+        h2,
+        h5 {
+            color: #464a4e;
+        }
+        a {
+            text-decoration: none;
+            color: #919090;
+        }
+        ul {
+            font-size: 14px;
+            padding-left: 20px;
+            padding-bottom: 10px;
+            margin-top: 5px;
+        }
+        strong {
             color: #464a4e;
         }
         header {
@@ -60,7 +73,6 @@
         .main-left-column > div,
         .main-right-column > div {
             height: fit-content;
-            padding: 5px 10px;
         }
         .main-left-column,
         .main-right-column {
@@ -73,10 +85,11 @@
             gap: 5px;
             font-size: 12px;
             border-bottom: 1px solid #464a4e;
-            padding-left: 0;
+            border-right: 1px solid #464a4e;
+            padding: 15px 0;
         }
         .main-content-data > img {
-            height: 70px;
+            height: 87px;
         }
         .main-contact-data-container {
             display: flex;
@@ -87,21 +100,69 @@
             padding-right: 0;
             padding-left: 20px;
             padding-bottom: 20px;
-            border-left: 1px solid #464a4e;
             border-bottom: 1px solid #464a4e;
         }
         .main-about-me > p {
-            font-size: 12px;
+            padding-top: 5px;
+            font-size: 14px;
             width: 260px;
         }
-
-        .main-skills > ul {
-            font-size: 14px;
+        .main-skills {
+            padding: 15px 15px;
             border-right: 1px solid #464a4e;
             border-bottom: 1px solid #464a4e;
         }
+        .main-education {
+            padding: 15px 10px;
+            border-right: 1px solid #464a4e;
+            border-bottom: 1px solid #464a4e;
+        }
+        .main-education > h2,
+        .main-education > h5,
+        .main-education > p {
+            margin-bottom: 5px;
+        }
+        .main-education > p,
+        .main-education-years {
+            font-size: 14px;
+        }
+        .main-education-years {
+            padding-top: 10px;
+        }
+        .main-languages {
+            padding: 15px 10px;
+            border-right: 1px solid #464a4e;
+        }
+        .main-experience {
+            padding: 15px 20px;
+            border-bottom: 1px solid #464a4e;
+        }
+        .main-experience > p,
+        .main-experience > span {
+            font-size: 14px;
+        }
+        .main-experience > h5,
+        .main-experience > div {
+            margin-bottom: 5px;
+        }
+        .main-projects {
+            padding: 15px 20px;
+        }
+        .main-projects > h2,
+        .main-experience > h2 {
+            margin-bottom: 10px;
+        }
+        .main-projects > h5 {
+            margin-bottom: 5px;
+        }
+        .main-projects > p,
+        .main-projects > span {
+            font-size: 14px;
+        }
+
         footer {
-            background-color: greenyellow;
+            margin-top: 40px;
+            font-size: 7px;
         }
     </style>
     <body>
@@ -129,10 +190,16 @@
                             Gdańsk, Poland
                         </div>
                         <div class="main-contact-text-container">
-                            linkedin.com/in/piotr-tomczyk-652b13236/
+                            <a
+                                href="https://www.linkedin.com/in/piotr-tomczyk-652b13236/"
+                            >
+                                linkedin.com/in/piotr-tomczyk-652b13236/
+                            </a>
                         </div>
                         <div class="main-contact-text-container">
-                            github.com/piotr-tomczyk/
+                            <a href="https://github.com/piotr-tomczyk">
+                                github.com/piotr-tomczyk/
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -145,13 +212,34 @@
                         <li>Node.js</li>
                         <li>CSS</li>
                     </ul>
-                    <h2>ALSO FAMILLIAR WITH</h2>
+                    <h2>FAMILLIAR WITH</h2>
                     <ul>
                         <li>GCP</li>
                         <li>MongoDb/DynamoDb</li>
+                        <li>Web extensions</li>
                         <li>SQL/NoSQL Databases</li>
                         <li>Angular</li>
                         <li>Python</li>
+                    </ul>
+                </div>
+                <div class="main-education">
+                    <h2>EDUCATION</h2>
+                    <h5>ENGINEER DEGREE</h5>
+                    <p>
+                        Gdańsk University of Technology
+                        <br />
+                        Computer Science
+                        <br />
+                    </p>
+                    <span class="main-education-years">
+                        <strong>2019-2023</strong>
+                    </span>
+                </div>
+                <div class="main-languages">
+                    <h2>LANGUAGES</h2>
+                    <ul>
+                        <li>English B2/C1</li>
+                        <li>Polish Native</li>
                     </ul>
                 </div>
             </div>
@@ -166,8 +254,60 @@
                         simulation, speedcubing and music/movies/books.
                     </p>
                 </div>
+                <div class="main-experience">
+                    <h2>EXPERIENCE</h2>
+                    <h5>WEB DEVELOPER</h5>
+                    <div class="main-experience-company">Appfire</div>
+                    <span><strong>2022 - present</strong></span>
+                    <ul>
+                        <li>
+                            Technologies learnned: JavaScript, Node.js, Vue.js,
+                            GCP, MongoDb, DynamoDb.
+                        </li>
+                        <li>
+                            Responsible for: Developing, maintaining and
+                            deploying software that's part of Jira
+                            Software/Cloud applications on backend and frontend
+                            side, monitoring GCP infrastracture.
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-projects">
+                    <h2>PROJECTS</h2>
+                    <h5>ENGINEER DEGREE PROJECT</h5>
+                    <span>Gdańsk University of Technology</span>
+                    <br />
+                    <span
+                        >Technologies used for the project: Typescript, Vue.js,
+                        Webpack, Python, Websockets.
+                    </span>
+                    <br />
+                    <br />
+                    <p>
+                        My diploma project was an web extension called Vodwatch.
+                        It's purpose is that users of Youtube, Netflix and HBO
+                        Max, could videos synchronously with other users.
+                        Extension took a form of a widget with UI written in
+                        Vue.js and Typescript and backend code with Python. The
+                        websocket connections were implemented with help of
+                        Socket.IO. The extension is available to download at
+                        Chrome web store under a name "vodwatch".
+                    </p>
+                </div>
             </div>
         </main>
-        <footer><div>Super</div></footer>
+        <footer>
+            <p>
+                I agree to the processing of personal data provided in this
+                document for realising the recruitment process pursuant to the
+                Personal Data Protection Act of 10 May 2018 (Journal of Laws
+                2018, item 1000) and in agreement with Regulation (EU) 2016/679
+                of the European Parliament and of the Council of 27 April 2016
+                on the protection of natural persons with regard to the
+                processing of personal data and on the free movement of such
+                data, and repealing Directive 95/46/EC (General Data Protection
+                Regulation).
+            </p>
+        </footer>
     </body>
 </html>
