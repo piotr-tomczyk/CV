@@ -27,6 +27,8 @@
         }
         h1,
         h2,
+        h3,
+        h4,
         h5 {
             color: #464a4e;
         }
@@ -53,10 +55,10 @@
         header > h2 {
             font-size: 50px;
         }
-        .header-image-contaier {
+        .header-image-container {
             position: relative;
         }
-        .header-image-contaier > img {
+        .header-image-container > img {
             position: absolute;
             border-radius: 50%;
             height: 125px;
@@ -109,7 +111,7 @@
             width: 260px;
         }
         .main-skills {
-            padding: 15px 15px;
+            padding: 15px 5px;
             border-right: 1px solid #464a4e;
             border-bottom: 1px solid #464a4e;
         }
@@ -131,6 +133,11 @@
             padding-top: 10px;
         }
         .main-languages {
+            padding: 15px 10px;
+            border-right: 1px solid #464a4e;
+            border-bottom: 1px solid #464a4e;
+        }
+        .main-certificates {
             padding: 15px 10px;
             border-right: 1px solid #464a4e;
         }
@@ -162,14 +169,30 @@
         }
 
         footer {
-            margin-top: 40px;
+            margin-top: 140px;
             font-size: 7px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #1a73e8; /* More distinctive blue */
+            transition: color 0.2s;
+        }
+        a:hover {
+            color: #0b47a1; /* Darker on hover */
+            text-decoration: underline;
+        }
+
+        .main-projects > p {
+            font-size: 15px;
+            margin-bottom: 8px;
+            line-height: 1.5;
         }
     </style>
     <body>
         <header>
             <h2>Piotr Tomczyk</h2>
-            <div class="header-image-contaier">
+            <div class="header-image-container">
                 <img
                     src="https://media.licdn.com/dms/image/C4E03AQEantNZKz8etg/profile-displayphoto-shrink_200_200/0/1652593830845?e=2147483647&v=beta&t=_c0T_oLr1Khc0YiNhfmod_1P3oF6nUwviXhcp13U2DI"
                     alt="aha"
@@ -182,13 +205,13 @@
                     <img src="./IMG/Contact Images.png" alt="" />
                     <div class="main-contact-texts-container">
                         <div class="main-contact-text-container">
-                            +48 500 367 333
+                            +34 610 34 88 40
                         </div>
                         <div class="main-contact-text-container">
-                            piovtom@gmail.com
+                            pr.tomczyk@protonmail.com
                         </div>
                         <div class="main-contact-text-container">
-                            Gdańsk, Poland
+                            Bilbao, Spain
                         </div>
                         <div class="main-contact-text-container">
                             <a
@@ -205,20 +228,17 @@
                     </div>
                 </div>
                 <div class="main-skills">
-                    <h2>SKILLS</h2>
+                    <h3>SKILLS</h3>
                     <ul>
-                        <li>JavaScript / Typescript</li>
-                        <li>Vue.js</li>
+                        <li>AWS / GCP</li>
                         <li>Node.js</li>
-                        <li>GCP / AWS</li>
-                        <li>MongoDb / DynamoDb</li>
-                        <li>Web extensions</li>
-                        <li>SQL / NoSQL Databases</li>
+                        <li>Vue</li>
+                        <li>AI Agents</li>
                     </ul>
                 </div>
                 <div class="main-education">
-                    <h2>EDUCATION</h2>
-                    <h5>ENGINEER DEGREE</h5>
+                    <h3>EDUCATION</h3>
+                    <h5>COMPUTER SCIENCE DEGREE</h5>
                     <p>
                         Gdańsk University of Technology
                         <br />
@@ -230,63 +250,60 @@
                     </span>
                 </div>
                 <div class="main-languages">
-                    <h2>LANGUAGES</h2>
+                    <h3>LANGUAGES</h3>
                     <ul>
-                        <li>English B2/C1</li>
+                        <li>English C1</li>
+                        <li>Spanish B1</li>
                         <li>Polish Native</li>
+                    </ul>
+                </div>
+                <div class="main-certificates">
+                    <h3>CERTIFICATES</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.credly.com/badges/113ad4db-2a85-4b1a-9d47-291baa7b98bb/public_url">
+                                GCP Associate Software Engineer
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
             <div class="main-right-column">
                 <div class="main-about-me">
-                    <h2>ABOUT ME</h2>
+                    <h3>ABOUT ME</h3>
                     <p>
-                        I am a qualified and professional computer science
-                        engineer with 1.5 years of experience in commercial work.
-                        I have great communication skills and I have always been
-                        a good teamworker. My hobbies are playing flight
-                        simulation, speedcubing and music/movies/books.
+                        Professional computer science engineer with 3.5 years of experience in web development.
+                        <br>
+                        Passionate about learning new technologies and building solutions that improve daily life.
+                        Interests include flight simulation, hiking, and speedcubing.
                     </p>
                 </div>
                 <div class="main-experience">
-                    <h2>EXPERIENCE</h2>
-                    <h5>SOFTWARE DEVELOPER</h5>
+                    <h3>EXPERIENCE</h3>
+                    <h5>SOFTWARE ENGINEER</h5>
                     <div class="main-experience-company">Appfire</div>
                     <span><strong>June 2022 - present</strong></span>
                     <ul>
-                        <li>
-                            Technologies learned: JavaScript/Typescript, Node.js, Vue.js,
-                            GCP, AWS, MongoDb, DynamoDb.
-                        </li>
-                        <li>
-                            Responsible for: Developing, maintaining and
-                            deploying software that's part of Jira
-                            Software/Cloud applications on backend and frontend
-                            side, monitoring and making changes in GCP / AWS infrastructure.
-                        </li>
+                        <li>Develop and maintain Jira Cloud applications (frontend & backend).</li>
+                        <li>Manage and optimize GCP/AWS infrastructure.</li>
+                        <li>Lead SCRUM processes and software features.</li>
+                        <li>Facilitate customer communications and knowledge sharing.</li>
                     </ul>
                 </div>
                 <div class="main-projects">
-                    <h2>PROJECTS</h2>
-                    <h5>ENGINEER DEGREE PROJECT</h5>
-                    <span>Gdańsk University of Technology</span>
-                    <br />
-                    <span
-                        >Technologies used for the project: Typescript, Vue.js,
-                        Webpack, Python, Websockets.
-                    </span>
-                    <br />
-                    <br />
-                    <p>
-                        My diploma project was an web extension called Vodwatch.
-                        It's purpose is that users of Youtube, Netflix and HBO
-                        Max, could watch videos synchronously with other users.
-                        Extension took a form of a widget with UI written in
-                        Vue.js and Typescript and backend code with Python. The
-                        websocket connections were implemented with help of
-                        Socket.IO. The extension is available to download at
-                        Chrome web store under a name "vodwatch".
-                    </p>
+                    <h3>PROJECTS</h3>
+                    <h4>TOBUS</h4>
+                    <ul>
+                        <li>Flight simulation addon for boarding/deboarding (4,000+ downloads).</li>
+                        <li>Automates passenger flow for X-Plane users.</li>
+                        <li><a href="https://forums.x-plane.org/files/file/87996-tobus-your-toliss-boarding-lua-script/">View project</a></li>
+                    </ul>
+                    <h4>vTrips Extension</h4>
+                    <ul>
+                        <li>Generates virtual trips based on airline schedules.</li>
+                        <li>Used by virtual airline communities.</li>
+                        <li><a href="https://piotr-tomczyk.github.io/trips-extension/">View project</a></li>
+                    </ul>
                 </div>
             </div>
         </main>
